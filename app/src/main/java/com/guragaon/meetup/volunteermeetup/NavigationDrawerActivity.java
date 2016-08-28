@@ -1,5 +1,6 @@
 package com.guragaon.meetup.volunteermeetup;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -81,7 +82,13 @@ public class NavigationDrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_qrcode) {
-            // Handle the camera action
+            WalkInFragment newFragment = new WalkInFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.frames, newFragment);
+            transaction.addToBackStack(null);
+
+                // Commit the transaction
+            transaction.commit();
         } else if (id == R.id.nav_walkin) {
 
         }
