@@ -1,2 +1,2 @@
 # fb_dev_circle_28_aug_android
-Android app 
+An Android application that will be used in our meetups itself. We will take a CSV of the people who register for a meetup, import it into a database, have a UI which enables an administrator to select which attendees to invite and then generate an email with a unique QR code for all of these selected attendees which will then be sent to them. And on the mobile side of things, we will have a QR code reader which reads all the entries in bulk and then posts them to the server.
